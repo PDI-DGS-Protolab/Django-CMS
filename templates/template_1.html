@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block base_content %}
+    <div id="alto">
+        <header>
+            <div class="center">
+                <a href="http://www.telefonica.com/en/home/jsp/home.jsp" target="_blank" title="Telefónica" > <div id="telefonica_logo" class="ir" >Telefónica</div></a>
+                <a href="index.html"><h1 id="instant_servers">Instant Servers</h1></a>
+            </div>
+        </header>
+
+
+        <div id="main">
+            <div class="center">
+                <!-- MAIN MENU-->
+                <div id="menu-cont">
+                    <ul id="ul-tabs">
+                        <li class="selected"><a href="index.html">Why Instant Servers</a></li>
+                        <li><a href="product-overview.html">Product Overview</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="run-anything.html">Use Cases</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li id="contact-us-menu"><a href="https://instantservers.secure.force.com/cloudtelefonica/contactus" id="contact_popup" class="fancybox.iframe" title="">Contact us</a><span></span></li>
+                    </ul>
+
+                <a id="login" href="https://my.instantservers.telefonica.com/login" onClick="trackDocument('login');" target="_blank"><span class="hidden">LOG IN</span></a>
+
+                <a id="signup" href="https://my.instantservers.telefonica.com/registration/join" onClick="trackDocument('signup1');" target="_blank"><span class="hidden">SIGN UP</span></a>
+                </div>
+
+
+
+
+                <!-- INTRO -->
+                <div id="intro" class="clearfix intro-page">
+                    <div class="left">
+                        <h2>Instant Servers</h2>
+                        <img class="instant_server" src="{{ STATIC_URL }}img/illustration_instantserver.png" alt="Instant Servers" title="Instant Servers"/>
+                    </div>
+
+                    <div class="right">
+                        <div class="description">
+                            <h3>Online computing power that evolves with your business</h3>
+                            <p>
+                                {% placeholder template_1_content %}
+                            </p>
+                            <br>
+                            <p><strong>Look what only Instant Servers can do for you!</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="content" class="clearfix">
+                 <div id="fullul-wrap" class="best-return">
+                        <div id="fullul">
+                        <div id="fullul-img">
+                            <img src="{{ STATIC_URL }}img/guaranteed-reliability.png" >
+                        </div>
+                        <div id="fullul-texto">
+                                <h4>Best Return</h4>
+                            <div id="fullul-close" class="cursorpointer">
+                                    <span>close </span> x
+                            </div>
+                                <p>Superior performance allows to serve more users per virtual machine, reducing infrastructure expenses.</p>
+                            <p>By providing <b>higher performance</b> and <b>reducing CAPEX and OPEX</b>, customers achieve <b>best return of investment, paying only for used compute capacity paying no setup fees or maintenance charges.</b> </p>
+                        </div>
+                    </div>
+                    <ul style="display:none;">
+                        <!-- precarga de imagenes !-->
+                        <li><img src="{{ STATIC_URL }}img/high-performance.png" alt="slider"></li>
+                        <li><img src="{{ STATIC_URL }}img/guaranteed-reliability.png" alt="slider"></li>
+                        <li><img src="{{ STATIC_URL }}img/best-run-slide-img.png" alt="slider"></li>
+                    </ul>
+                    </div>
+
+                    <ul id="ul-differences">
+                        <li id="high-performance">
+                            <h4>Highest performance</h4>
+                            <p>Computing capacity can “burst” by up to 400% on the fly at no extra cost. <span class="mas-li cursorpointer">+</span></p><p></p>
+                        </li>
+                        <li id="reliability">
+                            <h4>Guaranteed reliability</h4>
+                            <p>100% data integrity and reliability. 99.996%SLA availability per year with monetary compensation in case of downfall. <span class="mas-li cursorpointer">+</span></p>
+                        </li>
+                        <li id="best-return">
+                            <h4>Best return</h4>
+                            <p>Superior performance allows to serve more users per virtual machine, reducing infrastructure expenses. <span class="mas-li cursorpointer">+</span></p>
+                        </li>
+                    </ul>
+
+
+                    <div class="box-container left">
+                        <a href="files/TelefonicaDigital_InstantServers_CS_UK_v8website.pdf"><img src="{{ STATIC_URL }}img/casestudy.png" alt="" class="left" /></a>
+                        <h4><a href="files/TelefonicaDigital_InstantServers_CS_UK_v8website.pdf" target="_blank">Drive mission-critical mobile apps for transport enterprise</a></h4>
+                        <p>A case study on how we helped a major UK rail infrastructure provider improve business agility <a href="files/TelefonicaDigital_InstantServers_CS_UK_v8website.pdf" target="_blank" class="mas-li">+</a></p>
+                    </div>
+
+                    <div class="box-container left">
+                        <a href="files/TelefonicaDigital_InstantServers_WP_UK_v10website.pdf"><img src="{{ STATIC_URL }}img/whitepaper.png" alt="" class="left" /></a>
+                        <h4><a href="files/TelefonicaDigital_InstantServers_WP_UK_v10website.pdf" target="_blank">Choosing an enterprise-grade platform for business-critical cloud services & mobile applications</a></h4>
+                        <p>A white paper on how Bring Your Own Device, dynamic cloud-based services and mission-critical mobile apps demands a new approach <a href="files/TelefonicaDigital_InstantServers_WP_UK_v10website.pdf" target="_blank" class="mas-li">+</a></p>
+                    </div>
+
+
+                    <div id="checklist-cont" class="left">
+                        <ul id="ul-checklist">
+                            <li class="top-li left-li"><span class="one-line">No setup fees.</span></li>
+                            <li class="top-li"><span class="one-line">No maintenance charges.</span></li>
+                            <li id="lipenultimo" class="left-li"><span class="up">1 TB Internet transfer/month for free. 10 TB/month free until July 1st, 2013.</span><br></li>
+                            <li><span id="ultimo" class="up one-line">Pay only for what you use.</span></li>
+                        </ul>
+                    </div>
+
+                    <div id="register-cont" class="right">
+                        <a href="https://my.instantservers.telefonica.com/registration/join" id="account" onClick="trackDocument('signup2');" class="fancybox.iframe" title=""><span class="hidden">SING UP</span></a><br />
+                    </div>
+
+
+                </div>
+                <!-- TABS -->
+                <div id="tabs">
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="center">
+
+                <ul id="menu-pie">
+                    <li class="telefonica">&copy; Telefónica S.A.&nbsp;</li>
+                    <li> | <a target="_blank" href="http://www.telefonica.com/en/legal_text/proteccion_datos.shtml">All rights reserved</a>&nbsp;</li>
+                    <li> | <a target="_blank" href="http://www.telefonica.com/en/about_telefonica/html/home/home.shtml">About Telefónica</a>&nbsp;</li>
+                    <li> | <a target="_blank" href="http://www.telefonica.com/en/contact_us/corporativo.shtml">Contact us</a>&nbsp;</li>
+                    <li> | <a target="_blank" href="http://www.telefonica.com/en/legal_text/requisitos.shtml">Requirements</a>&nbsp;</li>
+                    <li> | <a target="_blank" href="http://www.telefonica.com/en/legal_text/declara_accesibilidad.shtml">Accessibility</a>&nbsp;</li>
+                    <!--li> | <a target="_blank" href="http://www.telefonica.com/en/legal_text/proteccion_datos.shtml">Privacy Policy</a>&nbsp;</li!-->
+                </ul>
+
+            </div>
+        </footer>
+    </div>
+
+{% endblock %}

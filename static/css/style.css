@@ -1,0 +1,2330 @@
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;background:#F3F3F3}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test
+a:hover, a:active {outline: none;} */
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* Other none semantic helper classes */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+/* using local fonts? make sure to read up on Paul Irish's
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #424242;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;}
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+
+/**********************************************************************/
+/**********************************************************************/
+a {
+	text-decoration: none;
+}
+
+a, a:visited, a:hover, a:active {
+	outline:0;
+}
+a:focus {
+	outline: 0px;
+}
+em{
+	font-style: italic;
+}
+
+strong{
+	font-weight: bold;
+}
+
+body{
+	background: white;
+	-webkit-font-smoothing: antialiased;
+	height: 100%;
+}
+
+#contenido_slider div{
+	display: none;
+}
+#contenido_slider div.selected {
+	display: block;
+}
+
+.center{
+	margin: 0 auto;
+}
+
+
+header{
+	width: 100%;
+	background: #f3f3f3 url(../img/bg_header.png) no-repeat top center;
+}
+header .center{
+	width: 940px;
+	height: 110px;
+	position: relative;
+	/*background-color: green;*/
+}
+
+#telefonica_logo{
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	width: 149px;
+	height: 41px;
+	background: url(../img/telefonica_logo.png) no-repeat 0 0;
+}
+
+#instant_servers{
+	position: absolute;
+	top: 30px;
+	right: -34px;
+	width: 280px;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 44px;
+	font-weight: normal;
+	color: white;
+}
+
+#main{
+	width: 100%;
+	background-color: #f3f3f3;
+	min-height:600px;
+}
+
+#main .center{
+	width: 946px;
+	min-height:500px;
+	height: auto !important;
+	height: 500px;
+	padding:25px 0px 18px 0px;
+	/*background-color: yellow;*/
+}
+
+footer{
+	width: 100%;
+	background: #f3f3f3;
+}
+
+footer .center{
+	width: 985px;
+	height: 137px;
+	padding-left: 35px;
+	padding-right: 37px;
+	position:relative;
+	/*background-color: blue;*/
+}
+
+footer #menu-pie{
+    bottom: 15px;
+    font-family: 'TelefonicaTextRegular';
+    font-size: 12pt;
+    position: absolute;
+    text-align: left;
+    width: 985px;
+}
+
+footer #menu-pie li  a{
+    color: #5DCDE9;
+    padding: 0 5px;
+    font-family: Arial;
+}
+footer #menu-pie li{
+    color: #5DCDE9;
+    display: inline-block;
+    float: none;
+    font-size: 12px;
+}
+
+footer #menu-pie li.telefonica{
+    color: #043F52;
+    font-family: Arial;
+}
+
+footer #brujula{
+	position: absolute;
+	left: 35px;
+	top: 5px;
+	color: #ababab;
+	font-family: 'TelefonicaTextRegular';
+}
+footer #brujula a{
+	color: #ababab;
+	font-family: 'TelefonicaTextRegular';
+	font-size: 13px;
+}
+
+
+
+#main h2{
+	font-family: 'TelefonicaTextBold';
+	font-weight:normal;
+	font-size: 25px;
+	line-height: 25px;
+	color: #404041;
+	padding: 0px;
+}
+#main h3.subtitle{
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 14px;
+	color: #919191;
+	padding-left: 30px;
+	font-weight: normal;
+}
+
+img.instant_server{
+padding-top: 34px;
+padding-left: 10px;
+height: 100px;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+#intro #customer{
+	padding-top: 30px;
+	padding-right: 10px;
+}
+
+#intro #purchase{
+	padding-top: 30px;
+}
+#menu-cont{
+	height:28px;
+	border-bottom: 1px solid #cacaca;
+}
+#menu-cont #signup {
+display: block;
+position: relative;
+float: right;
+width: 99px;
+height: 25px;
+background: url(../img/menu_signup.png) no-repeat 0px 0px;
+margin-right: 0px;
+border-right: 1px solid #9A9A9A;
+}
+#menu-cont #login {
+	display:block;
+	position:relative;
+	float:right;
+	width:101px;
+	height:28px;
+	background: url(../img/btn_login.png) no-repeat 0px 0px;
+}
+#menu-cont #login:hover {
+	background-position:0px -40px;
+}
+#menu-cont #login:active {
+	background-position:0px -80px;
+}
+#menu-cont #signup:hover {
+        background-position:0px -30px;
+}
+#menu-cont #signup:active {
+        background-position:0px -59px;
+}
+
+
+#resend_activation{
+    color: #1C7F9B;
+    font-family: 'TelefonicaTextRegular';
+    font-size: 15px;
+    font-weight: normal;
+    margin:5px 20px 0 0;
+    padding: 0;
+    float:right;
+}
+
+#resend_activation:active, #resend_activation:hover,#resend_activation:focus {
+    background-position: 0 -30px!important;
+    color:#777;
+    text-shadow:1px 1px 0 #ccc;
+}
+
+#menu-cont #ul-tabs {
+	position:relative;
+	float:left;
+	width:720px;
+}
+#menu-cont #ul-tabs li a{
+	padding:0px 20px;
+	text-align: center;
+}
+#menu-cont #ul-tabs li{
+	height:28px;
+	float: left;
+	background: url(../img/tab_separator.gif) no-repeat right center;
+	text-align: center;
+}
+#menu-cont #ul-tabs li#contact-us-menu a{
+	margin-right:20px;
+	/*padding:0px 23px 0px 20px;*/
+	padding:0px 0px 0px 20px;
+	position:relative;
+	float:left;
+	/*background: url(../img/icon_extlink-1.png) no-repeat center right;*/
+}
+
+#menu-cont #ul-tabs li#contact-us-menu a:hover{
+	/*background: url(../img/icon_extlink-3.png) no-repeat center right;*/
+}
+#menu-cont #ul-tabs li#contact-us-menu a:active{
+	/*background: url(../img/icon_extlink-3.png) no-repeat center right;*/
+}
+#menu-cont #ul-tabs li a{
+	font-family: 'TelefonicaTextRegular';
+	font-size: 15px;
+	color: #555555;
+	text-decoration: none;
+}
+#menu-cont #ul-tabs li a:hover{
+	color: #1C7F9B;
+}
+#menu-cont #ul-tabs li.selected a{
+	color:#1c7f9b;
+}
+.intro-page{
+	padding:33px 0px 0px 0px;
+	background: url(../img/bg_content.png) no-repeat top center;
+}
+
+/*Index
+------------------------------------*/
+#intro .description{
+	float: right;
+	width: 625px;
+	color: #424242;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+#intro .description h3{
+	font-size: 23px;
+	color: #404041;
+	font-family: 'TelefonicaTextBold';
+	font-weight:normal;
+	margin: 0px 0px 24px 0px;
+}
+
+#intro .description p, .box-container p {
+	font-size: 14px;
+	line-height: 22px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #424242;
+}
+#content {
+	padding:20px 0px 0px 0px;
+	position:relative;
+}
+#content #ul-differences li{
+	display:block;
+	/*position:relative;*/
+	padding:20px 30px;
+	margin:0px 20px 0px 0px;
+	float:left;
+	width:238px;
+	height:125px;
+	border:1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+}
+#content #ul-differences li#high-performance {
+cursor:pointer;
+background: white url(../img/illustration_performance.jpg) no-repeat 9px 65px;
+height: 125px !important;
+min-height: 125px;
+}
+#content #ul-differences li#reliability {
+	cursor:pointer;
+	background:#FFFFFF url(../img/illustration_reliability.jpg) no-repeat  9px 65px;
+}
+#content #ul-differences li#best-return {
+	cursor:pointer;
+	margin:0px 0px 0px 0px;
+	width: 238px;
+	background:#FFFFFF url(../img/illustration_bestreturn.jpg) no-repeat  9px 65px;
+}
+#content #ul-differences li h4, #fullul h4, .box-container h4 a {
+padding: 0px 0px 0px 0px;
+margin-bottom: 9px;
+font-size: 20px;
+font-family: 'TelefonicaTextBold';
+color: #1C7F9B;
+font-weight: normal;
+line-height: 22px;
+}
+#content #ul-differences li p{
+color: #424242;
+line-height: 20px;
+font-size: 13px;
+width: 167px;
+float: right;
+margin-right: -13px;
+padding-bottom: 24px; /* */
+}
+#content #checklist-cont{
+	margin:20px 0px 0px 0px;
+	width: 619px;
+	height:100px;
+	border:1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+}
+#content #checklist-cont span.up , #content #checklist-cont span.up {
+	padding-top:10px;
+}
+#content #checklist-cont li{
+	position:relative;
+	float:left;
+	width:308px;
+	height:50px;
+	background:url(../img/bg_checklist.png) no-repeat top center;
+}
+#content #checklist-cont li.top-li{
+	border-bottom:1px solid #FFFFFF;
+}
+#content #checklist-cont li.left-li{
+	border-right:1px solid #FFFFFF;
+}
+#content #checklist-cont li span{
+	display:block;
+	margin:0px 0px 0px 25px;
+/*	padding:15px 5px 15px 40px;*/
+	padding-left:40px;
+	padding-top:18px;
+	height:37px;
+	color:#424242;
+	font:normal 14px Arial, Helvetica, sans-serif;
+	background:url(../img/icon_check.png) no-repeat left 12px;
+}
+#content #checklist-cont li span.one-line{
+}
+#content #register-cont{
+	margin:10px 6px 0px 0px;
+	width: 298px;
+	height:115px;
+	text-align: center;
+	background-color:#FFF;
+	border:1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+}
+#checklist-cont span#ultimo.up {
+	padding-top:18px;
+}
+#lipenultimo , #lipenultimo span{
+}
+#ul-checklist {
+	background: transparent url(../img/bg_checklist.png);
+}
+#content #register-cont #account{
+	display:block;
+	margin:16px auto 0px auto;
+	width:270px;
+	height:33px;
+	background:url(../img/btn_signup.png) no-repeat 0 0;
+}
+#content #register-cont #account:hover {
+	background-position:0px -49px;
+}
+#content #register-cont #account:active {
+	background-position:0px -98px;
+}
+
+#content #register-cont a#customer-login {
+	padding-right:23px;
+	color:#a0a0a0;
+	font: 14px  'TelefonicaHeadlineLightRg';
+	text-decoration:underline;
+	background: url("../img/icon_extlink-2.png") no-repeat scroll center right transparent;
+}
+#content #register-cont a#customer-login:hover {
+	color:#1c7f9b;
+	background: url("../img/icon_extlink-4.png") no-repeat scroll center right transparent;
+}
+#register-cont #create-account {
+	padding-left: 44px;
+	text-align: left;
+	background: transparent url('../img/i.jpg') no-repeat 15px 0 ;
+	font-size: 13px;
+	color: #848484;
+	font-family: Arial;
+}
+/*Product overview
+--------------------------*/
+h2#intro-product-overview {
+	font-size: 23px;
+	text-align:center;
+	margin:40px 0px;
+}
+/*Tabs
+---------------------*/
+#tabs{
+	background-color:#FFF;
+}
+#tabs.overview-tabs{
+	background-color:#F3F3F3;
+}
+#tabs .container{
+	padding-left: 30px;
+}
+#tabs .container#overview_menu_cont{padding-left:0;}
+#overview_menu_cont{
+	background: url(../img/bg_overview_menu.jpg) repeat-x bottom left;
+}
+
+#overview {
+	background-color:#FFF;
+	border: 1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+}
+#overview h3{
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 24px;
+	color: #404041;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+#ul-overview li{
+	position: relative;
+	width: 219px;
+	height: 256px;
+	padding-top: 0;
+	margin-right: 20px;
+	display: block;
+	float: left;
+}
+
+#ul-overview li a{
+	display: block;
+	width: 175px;
+	height: 101px;
+	padding-top: 153px;
+	margin: 0 auto;
+}
+
+
+#ul-overview li.selected .flecha{background: url(../img/flecha.jpg) no-repeat 0 0;width: 31px; height: 17px;margin: 33px auto 0px;}
+
+#ul-overview li p,
+#ul-overview li h4{
+	text-align: center;
+}
+
+#ul-overview li h4{
+	font-family: 'TelefonicaTextRegular';
+	font-size: 16px;
+	color: #404041;
+	margin-bottom: 15px;
+}
+#ul-overview li p{
+	font-family: helvetica;
+	font-size: 13px;
+	color: #424242;
+}
+
+#li-sistema_operativo{
+	background: url(../img/bg_so_trans.jpg) no-repeat top center;
+}
+#li-sistema_operativo.selected{
+	background: url(../img/bg_so.jpg) no-repeat top center;
+}
+
+#li-capacidad_flexible{
+	background: url(../img/bg_flex_trans.jpg) no-repeat top center;
+}
+#li-capacidad_flexible.selected{
+	background: url(../img/bg_flex.jpg) no-repeat top center;
+}
+
+#li-customer_portal{
+	background: url(../img/bg_portal_trans.jpg) no-repeat top center;
+}
+#li-customer_portal.selected{
+	background: url(../img/bg_portal.jpg) no-repeat top center;
+}
+
+#ul-overview li#li-public_apis{
+	margin-right:0px;
+	background: url(../img/bg_apis_trans.jpg) no-repeat top center;
+}
+#ul-overview li#li-public_apis.selected{
+	background: url(../img/bg_apis.jpg) no-repeat top center;
+}
+
+#sistema_operativo {
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 30px;
+	padding-top: 60px;
+}
+
+#sistema_operativo .container{
+	border: none;
+	width: 256px;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+#sistema_operativo #ul-sistema_operativo li{
+	height: 46px;
+	width: 256px;
+	font-family: Tahoma;
+	padding-top: 6px;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+#sistema_operativo #ul-sistema_operativo li.last{
+	border: none;
+}
+
+#ul-sistema_operativo li a{
+	display: block;
+	height: 30px;
+	font-size: 16px;
+	color: #404041;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+#ul-sistema_operativo li a:hover{
+	color: #61b8ce;
+}
+#ul-sistema_operativo li.selected a:hover{
+	color: white;
+}
+#ul-sistema_operativo li.selected a{
+	color: white;
+	background-color: #1c7f9c;
+}
+
+
+.divselected {
+	display: block;
+}
+.divoculto {
+	display: none;
+}
+#sistema_operativo div h5{
+	height:55px;
+}
+#smartos{
+	width: 520px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#smartos h5{
+	background: url(../img/bg_smartos.jpg) no-repeat top left;
+	height: 25px;
+	margin-bottom: 15px;
+}
+
+#smartos p{
+	font:13px/22px Arial, Helvetica, sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+}
+#smartos p.notas {
+	font-size:12px;
+}
+
+#smartos h6{
+	font-family: 'TelefonicaTextRegular';
+	font-size: 16px;
+	color: #61b8ce;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#smartos #smartos-list li{
+	padding:0px 0px 35px 160px;
+	font:13px/22px Arial, Helvetica, sans-serif;
+	color: #424242;
+}
+#smartos #smartos-list li#node-os{
+	background: url(../img/node.jpg) no-repeat top left;
+}
+#smartos #smartos-list li#mongo-db-os{
+	background: url(../img/mongo-db.jpg) no-repeat top left;
+}
+#smartos #smartos-list li#percona-os{
+	background: url(../img/percona.jpg) no-repeat top left;
+}
+#smartos #smartos-list li#riak-os{
+	background: url(../img/riak.jpg) no-repeat top left;
+}
+#smartos #smartos-list li#hadoop{ background: url(../img/hadoop.png) no-repeat top left; }
+#smartos #smartos-list li#chef{ background: url("../img/chef.png") no-repeat scroll 45px top transparent; }
+#smartos #smartos-list li#haproxy{ background: url("../img/haproxy.png") no-repeat scroll 30px top transparent }
+#smartos #smartos-list li b{
+	color:#1d7c9a;
+}
+#windows_server_2008{
+	width: 520px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+
+}
+#windows_server_2008 h5{
+	background: url(../img/bg_wserver2008.jpg) no-repeat top left;
+	height: 32px;
+	margin-bottom: 15px;
+}
+
+#windows_server_2008 p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+}
+
+#ubuntu{
+	width: 520px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#ubuntu h5{
+	background: url(../img/bg_ubuntu.jpg) no-repeat top left;
+	height: 35px;
+	margin-bottom: 15px;
+}
+
+#ubuntu p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+}
+
+#cent_os{
+	width: 520px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#cent_os h5{
+	background: url(../img/bg_centos.jpg) no-repeat top left;
+	height: 35px;
+	margin-bottom: 15px;
+}
+
+#cent_os p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+}
+
+#fedora{
+	width: 520px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#fedora h5{
+	background: url(../img/fedora.jpg) no-repeat top left;
+	height: 35px;
+	margin-bottom: 15px;
+}
+
+#fedora p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+}
+
+#debian{
+	width: 520px;
+	padding-right: 50px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#debian h5{
+	background: url(../img/debian.jpg) no-repeat top left;
+	height: 53px;
+	margin-bottom: 15px;
+}
+
+#debian p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+}
+/* Slider */
+#capacidad_flexible{
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 30px;
+	padding-top: 60px;
+	min-height:260px;
+	height: auto !important;
+	height: 260px;
+}
+#capacidad_flexible .description{
+	width: 285px;
+}
+
+#capacidad_flexible .description p{
+	color: #424242;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	margin-bottom: 30px;
+}
+
+#capacidad_flexible .description h5{
+	color: #424242;
+	font-size: 17px;
+	font-family: 'TelefonicaTextBold';
+	font-weight: normal;
+	margin-bottom: 15px;
+}
+
+
+
+
+#capacidad_flexible .ui-slider-handle{
+	position: absolute;
+	top: 7px;
+	background: url(../img/boton_slider.gif) no-repeat 0 0;
+	border: none !important;
+	width: 25px;
+	height: 27px;
+}
+#capacidad_flexible .ui-corner-all{
+	border: none;
+}
+#capacidad_flexible .ui-state-default{
+	border: none;
+}
+
+#capacidad_flexible #slider.ui-slider-horizontal,
+#capacidad_flexible #slider.ui-slider,
+#capacidad_flexible #slider.ui-widget-content{
+	background: url(../img/fondo_slider4.jpg) repeat-x 0 4px;
+	height: 27px;
+}
+
+#capacidad_flexible .extremos{
+	background: url(../img/fondo_slider_extremos.png) repeat-x 0 18px;
+	height: 27px;
+	padding-left: 7px;
+	padding-right: 17px;
+	width: 225px;
+}
+
+#capacidad_flexible #container-slider {
+	position: relative;
+	width: 250px;
+	padding-top: 1px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#capacidad_flexible #container-abs {
+	position: absolute;
+	left: 30px;
+	top: 120px;
+}
+
+#capacidad_flexible #xs{
+	font-family: 'TelefonicaTextBold';
+	font-size: 15px;
+	color: #61b8ce;
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+
+#capacidad_flexible #xl{
+	font-family: 'TelefonicaTextBold';
+	font-size: 15px;
+	color: #61b8ce;
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
+
+
+
+#main_container_slider{
+	position: relative;
+	width: 520px;
+	padding-right: 30px;
+	background: url(../img/bg_linea_bola.png) no-repeat 24px 0;
+	margin-top: 60px;
+}
+
+#capacidad_flexible #opciones_capacidad{
+	position: relative;
+	width: 520px;
+	height: 154px;
+}
+
+
+
+/*
+#capacidad_flexible #opciones_capacidad.op_xs{
+	background: url(../img/bg_xs.png) no-repeat 0 0;
+}
+
+#capacidad_flexible #opciones_capacidad.op_s{
+	background: url(../img/bg_s.png) no-repeat 0 0;
+}
+
+#capacidad_flexible #opciones_capacidad.op_m{
+	background: url(../img/bg_m.png) no-repeat 0 0;
+}
+
+#capacidad_flexible #opciones_capacidad.op_l{
+	background: url(../img/bg_l.png) no-repeat 0 0;
+}
+
+#capacidad_flexible #opciones_capacidad.op_xl{
+	background: url(../img/bg_xl.png) no-repeat 0 0;
+}
+
+*/
+#capacidad_flexible .opcion{
+	display: none;
+	position: absolute;
+	top:-5px;
+	left: 30px;
+}
+#capacidad_flexible .opcion .big{
+    color: #404041;
+    float: left;
+    font-family: 'TelefonicaTextBold';
+    font-size: 70px;
+    position: relative;
+    text-align: center;
+    width: 90px;
+}
+#capacidad_flexible .opcion .big span {
+    position: absolute;
+    left:0;
+    margin-top: -9px;
+    font-size: 21px;
+}
+#capacidad_flexible .opcion .size{
+	position:relative;
+	float:left;
+	padding: 20px 0px 0px 20px;
+	font-family: 'TelefonicaTextRegular';
+	font-size: 25px;
+	color: #404041;
+}
+#capacidad_flexible .opcion .size div{
+	position:relative;
+	float:left;
+	padding: 0px 0px 0px 5px;
+	border-left:1px solid #e1e1e1;
+}
+#capacidad_flexible .opcion .size div.memory{
+	width:85px;
+}
+#capacidad_flexible .opcion .size div .blue{
+	display:block;
+	width:50px;
+	color:#62b8cf;
+	font-size: 16px;
+}
+
+
+#capacidad_flexible #bola_container{
+	width: 147px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 365px;
+	z-index: 10;
+	/*border: 1px solid orange;*/
+}
+
+#capacidad_flexible .op_05 #op_05, #capacidad_flexible .op_1 #op_1, #capacidad_flexible .op_15 #op_15, #capacidad_flexible .op_2 #op_2, #capacidad_flexible .op_4 #op_4, #capacidad_flexible .op_8 #op_8, #capacidad_flexible .op_16 #op_16 {
+	display: block;
+}
+
+/* customer portal*/
+
+#customer_portal{
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 30px;
+	padding-top: 60px;
+	min-height:260px;
+	height: auto !important;
+	height: 260px;
+}
+
+#customer_portal .left{
+	width: 385px;
+}
+#customer_portal .right{
+	width: 390px;
+	padding-right: 30px;
+}
+#customer_portal h6{
+	color: #61b8ce;
+	font-size: 13px;
+	font-family: helvetica;
+	font-weight: bold;
+}
+#customer_portal h6#server-administration{
+	padding-top: 8px;
+}
+#customer_portal h5{
+	color: #424242;
+	font-size: 17px;
+	font-family: 'TelefonicaTextBold';
+	font-weight: normal;
+	margin-bottom: 45px;
+}
+
+#customer_portal .intro p{
+	margin-bottom: 35px;
+}
+
+#customer_portal p{
+	color: #424242;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	margin-bottom: 30px;
+}
+
+#customer_portal img{
+	margin: 0px 0px 10px 0px;
+}
+
+/**/
+
+/* public apis*/
+
+#public_apis{
+	border-left: 1px solid #f5f5f5;
+	border-right: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 30px;
+	padding-top: 60px;
+	min-height:160px;
+	height: auto !important;
+	height: 160px;
+}
+
+#public_apis .left{
+	width: 320px;
+}
+#public_apis .right{
+	width: 520px;
+	border-left:1px solid #e9e9e9;
+	padding:0px 30px;
+}
+#public_apis h6{
+	color: #61b8ce;
+	font-size: 13px;
+	font-family: helvetica;
+	font-weight: normal;
+}
+#public_apis h5{
+	color: #424242;
+	font-size: 17px;
+	font-family: 'TelefonicaTextBold';
+	font-weight: normal;
+	margin-bottom: 15px;
+
+}
+
+#public_apis .intro p{
+	margin-bottom: 35px;
+}
+
+#public_apis p{
+	color: #424242;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+}
+
+#public_apis img{
+	padding-left: 80px;
+}
+
+/**/
+
+/* why-instant-servers */
+
+#why-instant-servers ul{
+	padding-top: 30px;
+}
+
+#why-instant-servers h5.left{
+	width: 200px;
+	text-align: right;
+	font-size: 20px;
+	color: #61b8ce;
+	font-family: 'TelefonicaTextRegular';
+	font-weight: normal;
+
+}
+#why-instant-servers p.right{
+	width: 540px;
+	padding-right: 85px;
+	color: #424242;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	margin-bottom: 30px;
+
+}
+
+/**/
+
+#benefits ul{
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+#benefits li{
+	float: left;
+	width: 255px;
+	height: 200px;
+	padding-right: 30px;
+	padding-bottom: 35px;
+}
+#benefits li h5{
+	height: 50px;
+	padding-left: 40px;
+	font-family: 'TelefonicaTextRegular';
+	font-size: 20px;
+	color: #62b8cf;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+#benefits p{
+	font-family: arial;
+	font-size: 13px;
+	line-height: 18px;
+	color: #424242;
+}
+
+#benefits #security{
+	background: url(../img/seguridad.png) no-repeat bottom left;
+}
+#benefits #agilityandtimetomarket{
+	background: url(../img/agilidad.png) no-repeat bottom left;
+}
+#benefits #performanceandscalability{
+	background: url(../img/performance.png) no-repeat bottom left;
+}
+#benefits #efficiency{
+	background: url(../img/eficiencia.png) no-repeat bottom left;
+}
+#benefits #costcontrol{
+	background: url(../img/control_costos.png) no-repeat bottom left;
+}
+#benefits #reliability{
+	background: url(../img/confiabilidad.png) no-repeat bottom left;
+}
+#benefits #globalscope{
+	background: url(../img/alcance_global.png) no-repeat bottom left;
+}
+
+
+/* uses cases */
+#uses-cases {
+	border: 1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+	padding-left: 30px;
+	padding-top: 60px;
+}
+
+#uses-cases .container{
+	border: none;
+	width: 256px;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+#uses-cases #ul-use-cases li{
+	height: 46px;
+	width: 256px;
+	font-family: Tahoma;
+	padding-top: 6px;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+#uses-cases #ul-use-cases li.last{
+	border: none;
+}
+
+#ul-use-cases li a{
+	display: block;
+	height: 30px;
+	font-size: 16px;
+	color: #424242;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+#ul-use-cases li a:hover{
+	color: #61b8ce;
+}
+#ul-use-cases li.selected a:hover{
+	color: white;
+}
+#ul-use-cases li.selected a{
+	color: white;
+	background-color: #1c7f9b;
+}
+
+#uses-cases .uses_cases_desc
+
+#uses-cases .uses_cases_desc ul{
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+#uses-cases .uses_cases_desc h6.left{
+	width: 125px;
+	text-align: right;
+	color: #1c7f9b;
+	font:bold 13px/18px Arial,Helvetica,sans-serif;
+
+}
+#uses-cases .uses_cases_desc p.right{
+	width: 390px;
+	color: #424242;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	margin-bottom: 30px;
+
+}
+
+#uses-cases .uses_cases_desc{
+	width: 540px;
+	padding-right: 30px;
+	padding-top: 12px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#uses-cases .uses_cases_desc h5{
+	margin-bottom: 25px;
+	padding: 0px 0px 0px 5px;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 24px;
+	color: #1c7f9b;
+	font-weight: normal;
+	border-left: 1px solid #EEEEEE;
+}
+
+#uses-cases .uses_cases_desc p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 15px;
+}
+
+#uses-cases .uses_cases_desc h6{
+	font-family: 'TelefonicaTextRegular';
+	font-size: 16px;
+	color: #61b8ce;
+	font-weight: normal;
+	margin-bottom: 8px;
+}
+/**/
+
+/* plans prices*/
+#plans-prices #tabs{
+	background:none;
+}
+#pricing .container{
+	padding-right: 30px;
+}
+
+#tabs #pricing .container{
+	padding: 0px 0px 0px 0px;
+}
+#tabs #pricing .container ul li{
+	margin:0px 0px 30px 0px;
+	padding:20px 30px;
+	background-color:#FFF;
+	border:1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+}
+
+
+#pricing h5 {
+	padding:0px 0px 0px 5px;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 24px;
+	color: #1c7f9b;
+	font-weight: normal;
+	border-left: 1px solid #eee;
+	/*background: url(../img/detail_heading.gif) no-repeat right center;*/
+}
+
+#pricing h5 a, #pricing a {
+    color: #1c7f9b;
+}
+
+#pricing h5 a.selected { font-weight: bold; }
+
+#price_smartos{
+	margin-bottom: 70px;
+}
+
+#price_smartos h6{
+	background: url(../img/bg_smartos.jpg) no-repeat center center;
+	height: 55px;
+	width: 255px;
+	margin-bottom: 0;
+}
+
+#price_smartos p{
+	font: 13px/20px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 40px;
+	width: 625px;
+}
+
+#price_smartos #tabla_smartos{
+	padding-top: 20px;
+}
+
+#price_smartos .tabla_appliances{
+	padding-top: 0px;
+}
+
+#price_wserver2008 {
+	margin-bottom: 70px;
+}
+
+#price_wserver2008 h6.titulo{
+	background: url(../img/bg_wserver2008.jpg) no-repeat center center;
+	height: 87px;
+	width: 255px;
+	margin-bottom: 15px;
+}
+#price_wserver2008 p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 30px;
+	width: 540px;
+
+}
+
+#price_wserver2008 .standard h6,
+#price_wserver2008 .enterprise h6{
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 24px;
+	color: #1c7f9b;
+	font-weight: normal;
+	padding-top: 122px;
+	margin-top: 38px;
+	padding-left: 18px;
+	width: 310px;
+	border-left: 1px solid #e9e9e9;
+}
+
+#price_wserver2008 .standard h6{
+	margin-top: 22px;
+	padding-top: 120px;
+}
+
+#price_ubuntu_centos {
+	margin-bottom: 70px;
+}
+
+#price_ubuntu_centos h6.titulo{
+	/*background: url(../img/logo_ubuntu_centos.png) no-repeat center center;*/
+	background: url(../img/logo_ubuntu_centos.jpg) no-repeat center center;
+	height: 66px;
+	width: 775px;
+	margin: 0px 0px 25px 55px;
+}
+
+#price_ubuntu_centos p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-top: 35px;
+	width: 300px;
+}
+
+#manuals{
+	padding-bottom: 70px;
+}
+
+#manuals p{
+	color: #6D6D6D;
+	font-family: helvetica;
+	font-size: 16px;
+	line-height: 21px;
+}
+
+#aditional_options p{
+	margin-top: 30px;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	width:475px;
+}
+
+#aditional_options {
+	padding-bottom: 70px;
+}
+
+.notas{
+	padding-top: 25px;
+}
+
+#pricing .notas
+{
+	padding-top:0px;
+}
+
+.notas p{
+	font-family: arial;
+	font-size: 10px;
+	color: #ababab;
+	line-height: 12px;
+	margin-top: 10px;
+}
+.overview-tabs .notas{
+	color:#959595;
+	font-size: 11px;
+	line-height: 15px;
+}
+#tablalinux tbody tr,#tablalinuxb tbody tr {
+	background: url(../img/fila_tabla_gris.png) no-repeat 0 0;
+}
+#tablalinux td, #tablalinuxb td{
+	height: 25px;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	color: #737374;
+	vertical-align: middle;
+	padding-top: 5px;
+}
+#tablalinux th, #tablalinuxb th{
+	height: 33px;
+	font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+}
+
+#tablalinux .sizemark,#tablalinuxb .sizemark{
+	color: #404041;
+	height: 35px;
+	font-family: 'TelefonicaTextBold';
+	font-size: 16px;
+	vertical-align: middle;
+	padding-top: 3px;
+    padding-left: 10px;
+}
+
+#pricing .sizestore{
+	padding-left:15px;
+	text-align: left;
+	font-family: 'TelefonicaTextRegular';
+	background: url(../img/bg-price.jpg) no-repeat 0px 14px;
+}
+#pricing #tablaws2008e .sizestore, #pricing #tablaws2008 .sizemark, #pricing #tablaws2008 .sizestore { background-position: 0 12px; }
+#pricing #tablaubucent .sizestore { background-position: 0 18px; }
+#pricing .vcpu{
+	font-family: 'TelefonicaTextRegular';
+}
+
+
+/* tabla 2 Appliances*/
+
+#tabs #pricing .tabla_appliances .container{
+	border: none;
+	padding: 0;
+	padding-top: 256px;
+	background: #5ac0d7 url(../img/appliances_logos.png) no-repeat 0 0;
+	border: 5px solid #f8f8f8;
+}
+
+#tablalinux2 tbody tr{
+	background: #5ac0d7 url(../img/fila_tabla_azul.png) no-repeat right top;
+}
+
+#tablalinux2 td{
+	height: 25px;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	color: #fff;
+	vertical-align: middle;
+	padding-top: 13px;
+}
+#tablalinux2 td.grey-row{
+	color:#404041;
+}
+
+#tablalinux2 td,
+#tablalinux2 th{
+	/*border: 1px solid black;*/
+}
+
+#tablalinux2 th{
+	height: 38px;
+	padding-bottom: 5px;
+	font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+}
+
+#tablalinux2 .sizemark{
+	height: 35px;
+	font-family: 'TelefonicaTextBold';
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+
+#tablalinux2 .sizestore{
+	text-align: left;
+}
+
+/* tablas windows server 2008 */
+.tabladefault tbody tr {
+	background: url(../img/fila_tabla_gris.png) no-repeat 0 0;
+}
+.tabladefault td {
+	height: 25px;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	color: #737374;
+	vertical-align: middle;
+	padding-top: 2px;
+}
+
+.tabladefault th {
+	height: 33px;
+	padding-bottom: 5px;
+	font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+}
+
+.tabladefault .sizemark {
+    color: #404041;
+	height: 35px;
+	font-family: 'TelefonicaTextBold';
+	font-size: 16px;
+	vertical-align: middle;
+	padding-top: 3px;
+    padding-left: 10px;
+}
+
+.tabladefault .sizestore{
+	text-align: left;
+}
+
+
+/* tabla ubuntu centos */
+
+#tablaubucent tbody tr{
+	background: url(../img/fila_tabla_gris.png) no-repeat 0 0px;
+}
+#tablaubucent td{
+	height: 25px;
+	font-family: arial;
+	font-size: 14px;
+	color:#737374;
+	vertical-align: middle;
+	padding-top: 13px;
+    text-align: center;
+}
+#tablaubucent td,
+#tablaubucent th{
+	/*border: 1px solid black;*/
+}
+#tablaubucent th{
+	height: 33px;
+	padding-bottom: 5px;
+	font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+}
+
+#tablaubucent .sizemark{
+	color: #404041;
+	font-family: 'TelefonicaTextBold';
+	font-size: 16px;
+	vertical-align: middle;
+    padding-left: 3px;
+}
+
+#tablaubucent .sizestore{
+	text-align: left;
+}
+
+/* Tabla transfer */
+
+#tablatransfer{
+	background: url(../img/tabla_network_bandwith.png) no-repeat 0 39px;
+}
+#tablatransfer td{
+	padding: 13px 15px 0px 0px;
+	height: 10px;
+	text-align: center;
+	font-family: arial;
+	font-size: 14px;
+	color: #737374;
+	vertical-align: middle;
+}
+#tablatransfer td.upto{
+	padding-left:10px;
+	text-align:left;
+}
+#tablatransfer td,
+#tablatransfer th{
+	/*border: 1px solid black;*/
+}
+#tablatransfer th{
+	height: 33px;
+	padding-bottom: 5px;
+	font-family: arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: #999;
+	text-align: center;
+}
+
+#tablatransfer .sizemark{
+	height: 35px;
+	font-family: 'TelefonicaTextBold';
+	font-size: 26px;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+
+#tablatransfer .sizestore{
+	text-align: left;
+}
+/*SUPPORT
+-------------------------*/
+#support {
+	border: 1px solid #ebebeb;
+	border-bottom:5px solid #ebebeb;
+	padding-left: 30px;
+	padding-top: 60px;
+}
+
+#support .container{
+	border: none;
+	width: 256px;
+	padding-left: 0;
+	padding-top: 0;
+}
+
+#support #ul-support li{
+	height: 46px;
+	width: 256px;
+	font-family: Tahoma;
+	padding-top: 6px;
+	border-bottom: 1px solid #e9e9e9;
+}
+
+#support #ul-support li.last{
+	border: none;
+}
+
+#ul-support li a{
+	display: block;
+	height: 30px;
+	font-size: 16px;
+	color: #424242;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+#ul-support li a:hover{
+	color: #61b8ce;
+}
+#ul-support li.selected a:hover{
+	color: white;
+}
+#ul-support li.selected a{
+	color: white;
+	background-color: #1c7f9b;
+}
+#support .support_desc{
+	width: 540px;
+	padding-right: 30px;
+	padding-bottom: 15px;
+	min-height:348px;
+	height: auto !important;
+	height: 348px;
+}
+
+#support .support_desc h5{
+	margin-bottom: 25px;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 22px;
+	color: #1c7f9b;
+	font-weight: normal;
+}
+#support .support_desc h5 span{
+	margin-right: 5px;
+	padding:0px 5px 0px 0px;
+	font-size: 40px;
+	font-family: 'TelefonicaTextBold';
+	font-weight: bold;
+	border-right: 1px solid #EEEEEE;
+}
+#support .support_desc a:hover {
+	color: #1C7F9B;
+
+}
+#support .support_desc a{
+		/*color:#1C7F9B;*/
+		color:#424242;
+		text-decoration:underline;
+}
+#support .support_desc p{
+	font: 13px/22px Arial,Helvetica,sans-serif;
+	color: #424242;
+	margin-bottom: 15px;
+}
+#support .support_desc#support-resources a{
+		color:#424242;
+}
+#support .support_desc#support-resources a:hover{
+		color:#1C7F9B;
+}
+#support .support_desc#support-resources ul li p{
+		line-height:18px;
+}
+#support .support_desc h6{
+	margin-bottom: 25px;
+	padding: 0px 0px 0px 0px;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 22px;
+	color: #1c7f9b;
+	font-weight: normal;
+	border-left: 1px solid #EEEEEE;
+}
+#support .support_desc .h7 {
+	margin-bottom: 15px;
+	padding: 0px 0px 0px 5px;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 18px;
+	color: #1c7f9b;
+	font-weight: normal;
+}
+.support_desc ul.order-list{
+	margin-left:50px;
+}
+.support_desc ul li {
+	margin-bottom:15px;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+}
+.support_desc ul li span{
+	color:#1c7f9b;
+	font-weight:bold;
+}
+#support .support_desc ul ul.order-list{
+	margin-top:10px;
+}
+#support .support_desc ul ul.order-list li{
+	margin-bottom:0px;
+}
+#submitting-a-support-ticket ul ul li{
+	margin-bottom:0px;
+}
+#tabla-support, .tabla-support{
+	margin-bottom:25px;
+    background: url("../img/tabla_support.png") no-repeat top left transparent;
+}
+.tabla-support.penalties {
+    background: none;border: 1px solid #ccc;margin-left: 60px;
+}
+
+#tabla-support th, .tabla-support th {
+    color: #2b88a2;
+    font:10px Arial, Helvetica, sans-serif;
+    height: 40px;
+	vertical-align: middle;
+    text-align: center;
+	text-transform:uppercase;
+}
+#tabla-support td, .tabla-support td {
+	width:135px;
+    color: #404041;
+    font:13px Arial, Helvetica, sans-serif;
+    height: 28px;
+	vertical-align: middle;
+    text-align: center;
+}
+.tabla-support.penalties td, .tabla-support.penalties th {
+    border: 1px solid #ccc;
+}
+
+#tabla-support td span, .tabla-support td span{
+	display:block;
+	font-size:11px;
+}
+#support .support_desc p.title.left{
+	width: 130px;
+	text-align: right;
+	color: #1c7f9b;
+	font:bold 13px/18px Arial,Helvetica,sans-serif;
+
+}
+#support .support_desc p.right,#support .support_desc div.right{
+	width: 390px;
+	color: #424242;
+	font: 13px/22px Arial,Helvetica,sans-serif;
+
+}
+#support .support_desc#support-resources h6.left{
+	width: 170px;
+	margin-bottom:0px;
+	text-align: right;
+	color: #1c7f9b;
+	font:bold 13px/18px Arial,Helvetica,sans-serif;
+	border:none;
+}
+#support .support_desc#support-resources  p.right{
+	width: 350px;
+	margin-bottom:0px;
+
+}
+#support .support_desc#manuals p{
+	line-height:36px;
+}
+#support .support_desc#manuals p span{
+	display:block;
+	position:relative;
+	float:left;
+}
+#support .support_desc#manuals p a{
+	display:block;
+	position:relative;
+	float:left;
+	height:25px;
+	padding:5px 15px 0px 15px;
+	line-height:25px;
+}
+/*Terms & Conditions*/
+
+#terms-conditions{
+	border-left: 1px solid #e9e9e9;
+	border-right: 1px solid #e9e9e9;
+	border-bottom: 1px solid #e9e9e9;
+	padding-left: 30px;
+	padding-top: 60px;
+	padding-right: 30px;
+	padding-bottom: 35px;
+}
+
+#terms-conditions .container{
+	border: none;
+	padding: 0;
+	width: 256px;
+}
+#terms-conditions .content{
+	width: 540px;
+}
+
+#ul-success-cases li.selected a{
+	color: #62b8cf;
+}
+
+#ul-success-cases li{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid #e9e9e9;
+}
+#ul-success-cases li.last{
+	border-bottom: none;
+}
+
+#ul-success-cases a{
+	color: #404041;
+	font-family: 'TelefonicaTextRegular';
+	font-size: 14px;
+}
+
+#ul-success-cases a span{
+	color: #62b8cf;
+}
+
+#terms-conditions h5{
+	font-family: 'TelefonicaHeadlineLightRg';
+	color: #61b8ce;
+	font-size: 24px;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+
+#terms-conditions h6{
+	font-family: arial;
+	font-size: 13px;
+	margin-bottom: 5px;
+	font-weight: normal;
+	color: #61b8ce;
+}
+
+#terms-conditions p{
+	font-family: arial;
+	font-size: 13px;
+	color: #424242;
+	margin-bottom: 15px;
+}
+#schedule a{
+	color:#1C7F9B;
+}
+/* subscribe-form */
+
+
+#subscribe-form .container{
+	padding: 20px;
+}
+
+
+#subscribe-form form{
+	border-bottom: 1px solid #e9e9e9;
+	width: 490px;
+}
+
+#subscribe-form h3{
+	position: relative;
+	font-family: 'TelefonicaHeadlineLightRg';
+	font-size: 24px;
+	font-weight: normal;
+	color: #61b8ce;
+	border-bottom: 1px solid #e9e9e9;
+	width: 490px;
+}
+
+#subscribe-form label{
+	display: inline-block;
+	width: 175px;
+	color: #424242;
+	font-family: arial;
+	font-size: 13px;
+}
+
+#subscribe-form ul{
+	padding-top: 40px;
+}
+
+#subscribe-form #li-size{
+	padding-top: 45px;
+}
+
+#subscribe-form li{
+	width: 490px;
+	padding-bottom: 14px;
+
+}
+
+#subscribe-form input{
+	width: 305px;
+	padding-left: 1px;
+	border: 1px solid #c8c8c8;
+	color: #acacac;
+	background: url(../img/bg_input_text.png) repeat-x 0 0;
+	font-family: arial;
+	font-style: italic;
+	padding-left: 1px;
+	height: 24px;
+}
+.ie #subscribe-form input{
+	padding-top: 3px;
+	padding-left: 3px;
+	height: 24px;
+}
+
+#susdsdbscribe-form select{
+/*	width: 310px;
+	padding-left: 1px;
+	border: 1px solid #c8c8c8;
+	color: #424242;
+	background: url(../img/bg_input_text.png) repeat-x 0 0;
+	font-family: arial;
+	padding-left: 1px;*/
+	height: 22px;
+}
+
+#subscribe-form #botonesform{
+	/*padding-top: 40px;*/
+	text-align: right;
+}
+
+#subscribe-form .requiredfields,
+#subscribe-form #cancelform {
+	font-size: 12px;
+	font-family: arial;
+	color: #acacac;
+}
+
+#subscribe-form{
+	overflow-x:hidden;
+}
+
+#registerform{
+	padding-bottom: 10px;
+}
+#cancelform{
+	margin-right: 15px;
+}
+
+#closeform{
+	position:absolute;
+	background: url(../img/close.png) no-repeat 0 0;
+	top: 10px;
+	right: 0;
+	width: 13px;
+	height: 15px;
+}
+
+#lnkDownload.right {
+float:right;
+padding:23px;
+}
+#lnkDownload span{background: url(../img/btn_download.png) no-repeat; display:block;width:91px; height:24px;}
+#lnkDownload:hover span{background: url(../img/btn_download_hover.png) no-repeat;}
+#lnkDownload:active span{background: url(../img/btn_download_press.png) no-repeat;}
+
+#nt1, #nt2, #nt3, #support-resources a ,#public_apis a, a.gris, #support a.gris{
+	color: #737374;
+	text-decoration: underline;
+}
+
+/**/
+
+/**/
+
+#public_apis h6.prelink,h6.prelink {
+margin-bottom: 0px;
+color: #1C7F9B;
+font: bold 13px/18px Arial,Helvetica,sans-serif;
+border: none;
+float: left;
+margin-right: 54px;
+margin-top: 1px;
+}
+#alto{
+height: 100%;
+position: relative;
+}
+.tabulacion{
+	margin-left:30px;
+}
+
+/* slider */
+
+.cursorpointer{
+ cursor:pointer;
+}
+	#fullul-wrap{
+		width:938px;
+		height: 165px;
+		_height:210px;
+		position: absolute;
+		border: 1px solid #EBEBEB;
+		border-bottom: 5px solid #EBEBEB;
+		display:none;
+		background:white;
+	}
+	#fullul-wrap.high-performance {
+		/* background: white url(../img/high-performance.png) no-repeat 725px 28px;*/
+	}
+	#fullul-wrap.reliability {
+		/* background: white url(../img/guaranteed-reliability.png) no-repeat 725px 28px; */
+	}
+	#fullul-wrap.best-return {
+		/* background: white url(../img/best-run-slide-img.png) no-repeat 725px 28px;*/
+	}
+	#fullul-wrap1, #fullul-wrap2 {
+		display:none;
+	}
+
+	#fullul{
+		position: absolute;
+		height: 100%;
+		width: 95%;
+		margin-left: 30px;
+	}
+	#fullul h4{
+		/*margin-top:26px;*/
+	}
+	#fullul-texto{
+		width:660px;
+	/*	line-height: 20px;*/
+		line-height: 18px;
+		float:left;
+		margin-top:26px;
+	}
+/*
+	.reliability #fullul-texto{
+		margin-top:16px;
+	}*/
+	#fullul-close{
+		position: absolute;
+		right: 0;
+		top: 13px;
+		color:#1c7f9b;
+	}
+	#fullul-close span{
+		border-right: 1px solid #1C7F9B;
+		margin: 0 5px;
+	}
+
+	.mas-li{
+                border-left: 1px solid #1C7F9B;
+                padding: 0 1px;
+		color:#1c7f9b;
+	}
+
+	#fullul-img{
+		float: right;
+		margin-top: 26px;
+		margin-right: 34px;
+	}
+
+	#fullul-texto p span {
+		color: #1C7F9B;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+.tachado{text-decoration:line-through;}
+
+
+#resend_activation { background: url("../../img/bg_buttons.png") repeat-x scroll 0 0 transparent !important;
+    color: #7F7F7F;
+    font-size: 14px !important;
+    font-weight: normal;
+    height: 25px;
+    padding: 5px 15px 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 #FFFFFF;
+    text-transform: uppercase !important; }
+
+
+#fancybox-frame { overflow: visible; }
+
+.divAutoscaling { margin-top:60px; border:1px solid #ccc; }
+
+#price_riverbed {
+    clear: both;
+    margin-top: 50px;
+}
+
+#price_riverbed h6 {
+    background: url("../img/bg_riverbed.png") no-repeat scroll center center transparent;
+    height: 87px;
+    margin-bottom: 15px;
+    width: 230px;
+}
+
+#price_riverbed p {
+    color: #424242;
+    font: 13px/20px Arial,Helvetica,sans-serif;
+    margin-bottom: 20px;
+    width: 625px;
+}
+
+#price_riverbed p.paragraph { margin:20px 0; width: 100% }
+
+.tabs { display: none; }
+.tabs.vis { display: block; }
+
+
+#pricing .first h5 { border:0; }
+
+#tabs #pricing .container ul li ul li {
+    border:0; margin:0; padding: 20px 0 30px; display: inline-block;
+}
+#tabs #pricing .container ul li ul li h5 {
+    font-size: 20px; padding: 5px 19px;
+}
+.clear { clear: both; }
+
+.tabladefault.bigBG1 tbody tr  { background: url("../img/bg_big1.png") repeat-y 0 0; border-bottom: 1px solid #eee;}
+.tabladefault.bigBG2 tbody tr  { background: url("../img/bg_big2.png") repeat-y 0 0; border-bottom: 1px solid #eee;}
+.note { margin-top:5px; font-size: 11px; }
+
+#aditional_options h6 { font-size: 20px; font-family: TelefonicaHeadlineLightRg; color:#1c7f9b; font-weight: normal; margin:10px 15px; }
+.indent { margin:0 15px; }
+
+.oh {
+    overflow: hidden;
+}
+
+.box-container {
+    background: none repeat scroll 0 0 #FFFFFF;
+    width: 45%;
+    padding: 15px;
+    min-height: 148px;
+    margin: 20px 28px 20px 0;
+    border:1px solid #ebebeb;
+    border-bottom: 5px solid #ebebeb;
+}
+
+.box-container + .box-container { margin-right: 0; }
+.box-container p { margin-top:15px }
+.box-container img { border:1px solid #ccc; margin:5px 15px 5px 0 }
