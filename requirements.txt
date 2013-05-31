@@ -1,0 +1,10 @@
+Django==1.5.1
+distribute==0.6.31
+gunicorn==0.17.4
+wsgiref==0.1.2
+django-classy-tags==0.4
+django-cms==2.4.1
+django-mptt==0.5.2
+django-reversion==1.7
+django-sekizai==0.7
+django-ses==0.4.1
